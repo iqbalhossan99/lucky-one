@@ -1,0 +1,33 @@
+.header{
+    height: 80px;
+    background: #03070a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 150px;
+
+}
+.header h2{
+    color: #FFFFFF;
+}
+.header img{
+    width: 140px;
+    height: 40px;
+}
+.header .navigation ul{
+    display: flex;
+
+}
+.header .navigation ul li{
+list-style: none;
+padding-left: 36px;
+}
+.header .navigation ul li a{
+text-decoration: none;
+font-style: normal;
+font-weight: 400;
+font-size: 17px;
+line-height: 20px;
+letter-spacing: 0.005em;
+color: #FFFFFF;
+}

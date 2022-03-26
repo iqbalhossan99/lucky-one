@@ -1,0 +1,10 @@
+.product{
+    padding: 10px;
+    border: 2px solid silver;
+    border-radius: 10px;
+    background-color: #fff;
+}
+.product img{
+    width: 300px;
+    height: auto;
+}
