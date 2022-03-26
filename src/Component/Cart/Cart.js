@@ -3,12 +3,9 @@ import CartItem from './Cart-item/CartItem';
 import './Cart.css';
 
 const Cart = ({cart}) => {
-    // console.log(cart)
-    let imgs = [];
     let names = [];
     for(const product of cart){
-        // imgs.push(product.img);
-        names.push(product.name);
+        names.push(`${product.name}`);
     }
 
     // handle the choose one button to show a random items
@@ -24,15 +21,12 @@ const Cart = ({cart}) => {
             <h2>Selected Items</h2>
 
             {
-                // imgs.map(img => <CartItem img={img}></CartItem>)
+                cart.map(cartItem => <CartItem key={cartItem.id} cartItem={cartItem}></CartItem>)
                 
-            }
-            {
-                names.map(name => <CartItem name={name}></CartItem>)
             }
             
             <button onClick={ () => handleChooseBtn(names)} className='choose-btn'>CHOOSE 1 FOR ME</button>
-            
+            <button className='again-btn'>Choose Again</button>
         </div>
     );
 };
