@@ -1,5 +1,5 @@
 .header{
-    height: 80px;
+    height: auto;
     background: #03070a;
     display: flex;
     align-items: center;
@@ -10,10 +10,7 @@
 .header h2{
     color: #FFFFFF;
 }
-.header img{
-    width: 140px;
-    height: 40px;
-}
+
 .header .navigation ul{
     display: flex;
 
@@ -30,4 +27,19 @@ font-size: 17px;
 line-height: 20px;
 letter-spacing: 0.005em;
 color: #FFFFFF;
+}
+
+@media only screen and (max-width: 580px) {
+    .header {
+        display: block;
+        padding: 20px 50px;
+
+    }
+    .header .navigation ul{
+        padding: 0;
+    }
+    .header .navigation ul li{
+        padding-left: 0;
+        padding-right: 20px;
+    }
 }

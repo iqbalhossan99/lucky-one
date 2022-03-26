@@ -10,7 +10,7 @@ const Products = ({handleCartBtn, product}) => {
         <div className='product'>
             <img src={img} alt="" />
             <p>{name}</p>
-            <h5>Price: {price}</h5>
+            <h5>Price: ${price}</h5>
             <button onClick={ () => handleCartBtn(product)}>Add To Cart     <FontAwesomeIcon icon={faShoppingCart} /></button>
         </div>
     );
