@@ -4,14 +4,20 @@ import './Cart.css';
 
 const Cart = ({cart}) => {
     // console.log(cart)
-    // let imgs = [];
+    let imgs = [];
     let names = [];
     for(const product of cart){
         // imgs.push(product.img);
         names.push(product.name);
     }
 
-    
+    // handle the choose one button to show a random items
+    const handleChooseBtn = (names) => {
+        const displayChooseItem = names[Math.floor(Math.random() * names.length)];
+        alert(`It will help full for you. You can buy this product:  ${displayChooseItem}`);
+        console.log(displayChooseItem)
+    }
+
     return (
 
         <div className='cart'>
@@ -25,7 +31,7 @@ const Cart = ({cart}) => {
                 names.map(name => <CartItem name={name}></CartItem>)
             }
             
-            <button className='choose-btn'>CHOOSE 1 FOR ME</button>
+            <button onClick={ () => handleChooseBtn(names)} className='choose-btn'>CHOOSE 1 FOR ME</button>
             
         </div>
     );
