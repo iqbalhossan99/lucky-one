@@ -3,13 +3,15 @@ import CartItem from './Cart-item/CartItem';
 import './Cart.css';
 
 const Cart = ({cart}) => {
-    console.log(cart)
+    // console.log(cart)
     // let imgs = [];
     let names = [];
     for(const product of cart){
         // imgs.push(product.img);
         names.push(product.name);
     }
+
+    
     return (
 
         <div className='cart'>
@@ -23,6 +25,7 @@ const Cart = ({cart}) => {
                 names.map(name => <CartItem name={name}></CartItem>)
             }
             
+            <button className='choose-btn'>CHOOSE 1 FOR ME</button>
             
         </div>
     );
